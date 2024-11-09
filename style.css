@@ -1,6 +1,8 @@
-/* * {
-  border: 1px red solid;
-} */
+* {
+  /* border: 1px red solid; */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 body {
   font-family: Roboto, sans-serif;
@@ -9,6 +11,13 @@ body {
   min-height: 100vh;
   padding: 0;
   margin: 0;
+  font-weight: normal;
+  line-height: normal;
+  font-style: normal;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* By top->bottom, Alignment and background color */
@@ -21,6 +30,30 @@ body {
   gap: 24px;
 }
 
+.hero {
+  gap: 32px;
+  padding: 32px;
+}
+
+.hero-left {
+  width: 400px;
+}
+
+.hero-left h1 {
+  line-height: 1.1;
+  margin-bottom: -8px;
+}
+
+.hero-right {
+  display: flex;
+  background-color: #7f858a; 
+  width: 400px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .header,
 .header ul,
 .footer,
@@ -32,11 +65,13 @@ body {
 
 .header,
 .footer {
-  justify-content: space-around;
+  justify-content: center;
+  gap: 18rem;
 }
 
 .hero {
   justify-content: center;
+  padding: 64px;
 }
 
 .cards-container {
@@ -44,20 +79,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 24px;
 }
 
 .cards {
   display: flex;
   flex-direction: row;
+  gap: 42px;
 }
 
 .card {
   width: 150px;
-  padding: 1rem;
-  margin: 1rem;
 }
 
 .card p {
+  margin-top: 0;
   text-align: center;
 }
 
@@ -87,10 +123,12 @@ h2,
 
 .hero h1 {
   font-size: 48px;
+  font-weight: 600;
 }
 
 .hero h1,
-.header .logo {
+.header .logo,
+.hero-right {
   color: #F9FAF8;
 }
 
@@ -113,4 +151,15 @@ h2,
 
 .header .logo {
   font-size: 24px;
+}
+
+
+/* button and cta */
+.hero button {
+  background-color: #3882F6;
+  color: #F9FAF8;
+  font-weight: 600;
+  border: 2px solid #3882F6;
+  border-radius: 8px;
+  padding: 6px 24px;
 }

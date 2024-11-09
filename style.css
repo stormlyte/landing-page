@@ -1,6 +1,6 @@
-* {
+/* * {
   border: 1px red solid;
-}
+} */
 
 body {
   font-family: Roboto, sans-serif;
@@ -17,7 +17,12 @@ body {
   flex: 1;
 }
 
+.header ul {
+  gap: 24px;
+}
+
 .header,
+.header ul,
 .footer,
 .hero {
   background-color: #1F2937;
@@ -75,7 +80,8 @@ body {
 /* Typography */
 
 h1,
-h2 {
+h2,
+.logo {
   font-weight: 900;
 }
 
@@ -89,10 +95,12 @@ h2 {
 }
 
 /* remove link decoration and set font style */
+.header a,
 .header ul,
 .hero-left p,
 .footer {
   list-style-type: none;
+  text-decoration: none;
   font-size: 18;
   color: #E5E7EB;
 }
